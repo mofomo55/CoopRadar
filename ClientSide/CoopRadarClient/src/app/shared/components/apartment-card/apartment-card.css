@@ -1,0 +1,33 @@
+.apartment-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.image-placeholder {
+  height: 160px;
+  background: linear-gradient(135deg, #dbeafe, #bbf7d0);
+}
+
+.apartment-card__content {
+  padding: 1rem;
+}
+
+.apartment-card__content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.city,
+.price {
+  margin: 0;
+  color: #475569;
+}
+
+.price {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #0f172a;
+}

@@ -1,0 +1,6 @@
+<section>
+  <h1>Available Apartments</h1>
+  @for (apartment of apartmentService.list(); track apartment.id) {
+    <app-apartment-card [apartment]="apartment" />
+  }
+</section>
