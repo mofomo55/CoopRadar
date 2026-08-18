@@ -1,8 +1,69 @@
-<article class="apartment-card">
-  <div class="image-placeholder" aria-hidden="true"></div>
-  <div class="apartment-card__content">
-    <h3>{{ apartment().title }}</h3>
-    <p class="city">{{ apartment().city }}</p>
-    <p class="price">{{ apartment().price }} {{ apartment().currency }}</p>
-  </div>
-</article>
+<!-- <article class="apartment-card">
+  <div class="image-placeholder" aria-hidden="true"></div> -->
+ <!--  <div class="apartment-card__content"> -->
+   
+<div class="card">
+
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Apartment Building">
+      <div class="badge-reserved">Reserved</div>
+              <!-- Heart Favorite Icon -->
+    <div class="badge-fav">
+       <button class="favorite-btn" aria-label="Add to favorites">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+    </div>
+ 
+    </div>
+
+    <!-- Content -->
+    <div class="card-content">
+      <div class="tag-just-now">JUST NOW</div>
+      <h2 class="title">WOHNBAU-VEREINIGUNG</h2>
+      <p class="address">Margarete-Schütte-Lihotzky-Platz 1,<br>1100 Vienna</p>
+
+      <div class="divider"></div>
+
+      <div class="financial-info">
+        <div class="financial-row"><strong>MONTHLY RENT:</strong> €1,150</div>
+        <div class="financial-row"><strong>DOWN PAYMENT:</strong> €12,500</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Footer Specs -->
+      <div class="card-footer">
+        <div class="amenities">
+          <!-- Area Icon -->
+          <div class="amenity-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 3H3v18h18V3z"></path>
+              <path d="M3 9h18"></path>
+              <path d="M9 21V9"></path>
+            </svg>
+            <span>89 m²</span>
+          </div>
+
+          <!-- Bed/Rooms Icon -->
+          <div class="amenity-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 4v16M2 8h20v12M22 4v16M2 12h20"></path>
+            </svg>
+            <span>3 Rooms</span>
+          </div>
+
+          <!-- Floor/Stairs Icon -->
+          <div class="amenity-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19h4v-4h4v-4h4V7h4"></path>
+            </svg>
+            <span>Floor 4</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
