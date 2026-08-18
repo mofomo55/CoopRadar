@@ -1,0 +1,9 @@
+<section>
+  <h1>Companies</h1>
+  @for (company of companyService.list(); track company.id) {
+    <article>
+      <h2>{{ company.name }}</h2>
+      <p>{{ company.city }}</p>
+    </article>
+  }
+</section>
