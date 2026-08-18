@@ -16,6 +16,75 @@ export class ApartmentService {
       bathrooms: 1,
       isFavorite: true,
       companyId: 'c-1'
+    },
+        {
+      id: '2',
+      title: 'Modern 2-bedroom apartment',
+      slug: 'modern-2-bedroom-apartment',
+      description: 'Bright apartment near the city center.',
+      price: 1450,
+      currency: 'EUR',
+      city: 'Berlin',
+      bedrooms: 2,
+      bathrooms: 1,
+      isFavorite: true,
+      companyId: 'c-1'
+    },
+
+            {
+      id: '3',
+      title: 'Modern 2-bedroom apartment',
+      slug: 'modern-2-bedroom-apartment',
+      description: 'Bright apartment near the city center.',
+      price: 1450,
+      currency: 'EUR',
+      city: 'Berlin',
+      bedrooms: 2,
+      bathrooms: 1,
+      isFavorite: true,
+      companyId: 'c-1'
+    },
+
+            {
+      id: '4',
+      title: 'Modern 2-bedroom apartment',
+      slug: 'modern-2-bedroom-apartment',
+      description: 'Bright apartment near the city center.',
+      price: 1450,
+      currency: 'EUR',
+      city: 'Berlin',
+      bedrooms: 2,
+      bathrooms: 1,
+      isFavorite: true,
+      companyId: 'c-1'
+    },
+
+            {
+      id: '5',
+      title: 'Modern 2-bedroom apartment',
+      slug: 'modern-2-bedroom-apartment',
+      description: 'Bright apartment near the city center.',
+      price: 1450,
+      currency: 'EUR',
+      city: 'Berlin',
+      bedrooms: 2,
+      bathrooms: 1,
+      isFavorite: true,
+      companyId: 'c-1'
+    },
+
+            {
+      id: '6',
+      title: 'Modern 2-bedroom apartment',
+      slug: 'modern-2-bedroom-apartment',
+      description: 'Bright apartment near the city center.',
+      price: 1450,
+      currency: 'EUR',
+      city: 'Berlin',
+      bedrooms: 2,
+      bathrooms: 1,
+      isFavorite: true,
+      companyId: 'c-1'
     }
   ]);
 
