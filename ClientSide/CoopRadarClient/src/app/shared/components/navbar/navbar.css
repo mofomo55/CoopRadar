@@ -58,8 +58,9 @@
   text-decoration: none;
 
   .logo-icon {
-    width: 44px;
-    height: 32px;
+    width: 210px;
+    height: 150px;
+    object-fit: contain;
   }
 
   .brand-name {
@@ -141,7 +142,7 @@
 }
 
 /* Responsive Desktop Media Query */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .header-container {
     height: 70px;
     padding: 0 32px;

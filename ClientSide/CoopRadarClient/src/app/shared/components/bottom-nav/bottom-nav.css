@@ -1,21 +1,109 @@
 .bottom-nav {
   position: fixed;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.5rem;
-  padding: 0.75rem 1rem 1rem;
-  background: #fff;
-  border-top: 1px solid #e2e8f0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -4px 14px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.bottom-nav button {
-  border: none;
-  background: transparent;
-  border-radius: 12px;
-  padding: 0.75rem 0.5rem;
-  font-weight: 600;
-  color: #475569;
+.legal-links {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.legal-links a {
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover,
+.legal-links a:focus-visible {
+  color: #0b132b;
+}
+
+.icon-links {
+  display: flex;
+  align-items: center;
+  gap: 25%;
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.icon-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #4b5563;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-links a:hover,
+.icon-links a:focus-visible {
+  color: #0b132b;
+  background-color: #f3f4f6;
+}
+
+.icon-links a:focus-visible,
+.legal-links a:focus-visible {
+  outline: 2px solid #0b132b;
+  outline-offset: 2px;
+}
+
+.icon-links svg {
+  width: 1.5rem !important;
+  height: 1.5rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .legal-links {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .legal-links {
+    display: flex !important;
+  }
+
+  .icon-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+
 }
