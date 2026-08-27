@@ -9,14 +9,14 @@ h1 {
 }
 
 .content-List{
-    background-color: #f3f4f6;
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 100vh;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-radius: 20px;
+    border-radius: 5px;
     justify-content: space-around;
     align-items: stretch;
     align-content: stretch;
