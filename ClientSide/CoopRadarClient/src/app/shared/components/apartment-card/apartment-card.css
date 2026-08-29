@@ -179,7 +179,7 @@
     .amenities {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 13px;
     }
 
     .amenitiesHeader {
@@ -192,7 +192,7 @@
     .amenity-item {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 2px;
     }
 
     .amenity-itemHeader {

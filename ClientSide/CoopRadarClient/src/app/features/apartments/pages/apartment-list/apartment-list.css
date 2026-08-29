@@ -9,7 +9,7 @@ h1 {
 }
 
 .content-List{
-    background-color: #f7f7f7;
+    background-color: rgb(254 254 254);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,9 +17,9 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 5px;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: stretch;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 20px;
 }
 
 
