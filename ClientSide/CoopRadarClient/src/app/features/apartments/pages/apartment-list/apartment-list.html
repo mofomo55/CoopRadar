@@ -1,8 +1,13 @@
 <section>
-  <div class="content-List">
+  
+  <aside class="filters-sidebar">
+    <app-filter-sidebar >
+    </app-filter-sidebar>
+  </aside>
+  
+  <main class="content-List">
   @for (apartment of apartmentService.list(); track apartment.id) {
     <app-apartment-card [apartment]="apartment" />
   }
-  </div>
-
+  </main>
 </section>
