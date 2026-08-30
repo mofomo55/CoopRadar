@@ -1,0 +1,84 @@
+<aside class="filter-sidebar" aria-label="Filter options">
+  <div class="filter-sidebar__header">
+    <h2>Filter Options</h2>
+    <button type="button" class="filter-sidebar__reset" (click)="resetAll()">
+      Reset All
+    </button>
+  </div>
+
+  <div class="filter-sidebar__section">
+    <label class="field-label">Rent</label>
+    <div class="range-inputs">
+      <div class="input-group">
+        <span class="input-prefix">Min</span>
+        <input
+          type="number"
+          [(ngModel)]="minRent"
+          min="0"
+          placeholder="Min"
+          aria-label="Minimum rent"
+        />
+      </div>
+
+      <div class="input-group">
+        <span class="input-prefix">Max</span>
+        <input
+          type="number"
+          [(ngModel)]="maxRent"
+          min="0"
+          placeholder="Max"
+          aria-label="Maximum rent"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-sidebar__section">
+    <label class="field-label" for="cooperativeDeposit">Cooperative Deposit</label>
+    <div class="currency-input">
+      <span class="currency-symbol" aria-hidden="true">€</span>
+      <input
+        id="cooperativeDeposit"
+        type="number"
+        [(ngModel)]="cooperativeDeposit"
+        min="0"
+        placeholder="0"
+        aria-label="Cooperative deposit"
+      />
+    </div>
+  </div>
+
+  <div class="filter-sidebar__section">
+    <label class="field-label">Room Count</label>
+    <div class="room-options">
+      <button
+        type="button"
+        *ngFor="let room of roomOptions"
+        class="room-button"
+        [class.active]="selectedRooms.includes(room)"
+        (click)="toggleRoom(room)"
+      >
+        {{ room }}
+      </button>
+    </div>
+  </div>
+
+  <div class="filter-sidebar__section">
+    <label class="field-label" for="companySelect">Cooperative Companies</label>
+    <select
+      id="companySelect"
+      class="company-select"
+      multiple
+      [(ngModel)]="selectedCompanies"
+      aria-label="Select cooperative companies"
+    >
+      <option *ngFor="let company of companyOptions" [value]="company">
+        {{ company }}
+      </option>
+    </select>
+  </div>
+
+  <button type="button" class="filter-sidebar__apply" (click)="applyFilters()">
+    Apply Filters
+  </button>
+</aside>

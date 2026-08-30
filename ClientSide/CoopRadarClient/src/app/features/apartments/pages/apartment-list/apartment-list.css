@@ -1,6 +1,11 @@
 section {
-  padding: 1.5rem;
- background-color: #fff;
+  /* padding: 1.5rem; */
+  background-color: #fff;
+  /* display: grid !important; */
+  grid-template-columns: 350px 1fr; /* عرض ثابت للشريط وعرض مرن للمحتوى */
+  /* gap: 24px;   */
+  align-items: start; /* يمنع تمدد طول الشريط الجانبي ليصل للأسفل */
+  padding: 24px;
 }
 
 h1 {
@@ -9,7 +14,7 @@ h1 {
 }
 
 .content-List{
-    background-color: rgb(254 254 254);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -23,5 +28,29 @@ h1 {
 }
 
 
+
+.filters-sidebar {
+  /* تثبيت الشريط عند التمرير مثل Airbnb و Zillow */
+  position: sticky;
+  top: 24px; 
+  height: fit-content;
+  max-height: calc(100vh - 48px);
+   overflow-y: auto;  
+     display:none !important;
+  /* التنسيق البصري */
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+  @media (min-width: 925px) {
+
+    section {
+       display: grid !important;
+    }
+   .filters-sidebar{
+       display:block !important;
+   }
+  }
 
 
