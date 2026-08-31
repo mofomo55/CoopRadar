@@ -20,22 +20,22 @@
 
     <!-- Desktop Navigation Links (Hidden on Mobile) -->
     <nav class="desktop-nav">
-      <a class="nav-button" routerLink="/properties" routerLinkActive="active">About CoopRadar</a>
-      <a class="nav-button" routerLink="/about" routerLinkActive="active">Contact</a>
-      <a class="nav-button" routerLink="/contact" routerLinkActive="active">CoopRadar App</a>
+      <a class="nav-button" routerLink="/about" routerLinkActive="active">About CoopRadar</a>
+      <a class="nav-button" routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a class="nav-button" routerLink="/app" routerLinkActive="active">CoopRadar App</a>
     </nav>
 
     <!-- Action Icons -->
     <div class="action-icons">
       <!-- Favorites (Heart) -->
-      <button class="icon-btn" aria-label="Favorites" routerLink="/favorites">
+      <a class="icon-btn" aria-label="Favorites" routerLink="/favorites" title="Favorites">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-heart">
           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
         </svg>
-      </button>
+      </a>
 
       <!-- Properties / Buildings -->
-      <button class="icon-btn" aria-label="Listings" routerLink="/my-listings">
+      <a class="icon-btn" aria-label="Listings" routerLink="/my-listings" title="Listings">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <rect x="4" y="2" width="9" height="20" rx="1"></rect>
           <rect x="13" y="8" width="7" height="14" rx="1"></rect>
@@ -45,15 +45,15 @@
           <path d="M16 12h1"></path>
           <path d="M16 16h1"></path>
         </svg>
-      </button>
+      </a>
 
       <!-- Notifications -->
-      <button class="icon-btn" aria-label="Notifications">
+      <a class="icon-btn" aria-label="Notifications" routerLink="/notifications" title="Notifications">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
           <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
         </svg>
-      </button>
+      </a>
     </div>
 
   </div>

@@ -48,6 +48,60 @@ export const routes: Routes = [
         (m) => m.AlertSettingsPage
       )
   },
+  {
+    path: 'impressum',
+    loadComponent: () =>
+      import('./features/legal/pages/impressum/impressum').then(
+        (m) => m.ImpressumPage
+      )
+  },
+  {
+    path: 'datenschutz',
+    loadComponent: () =>
+      import('./features/legal/pages/datenschutz/datenschutz').then(
+        (m) => m.DatenschutzPage
+      )
+  },
+  {
+    path: 'nutzungsbedingungen',
+    loadComponent: () =>
+      import('./features/legal/pages/nutzungsbedingungen/nutzungsbedingungen').then(
+        (m) => m.NutzungsbedingungenPage
+      )
+  },
+  {
+    path: 'app',
+    loadComponent: () =>
+      import('./features/app/pages/coop-radar-app/coop-radar-app').then(
+        (m) => m.CoopRadarAppPage
+      )
+  },
+  {
+    path: 'about',
+    loadComponent: () =>
+      import('./features/about/pages/about/about').then((m) => m.AboutPage)
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./features/contact/pages/contact/contact').then(
+        (m) => m.ContactPage
+      )
+  },
+  {
+    path: 'my-listings',
+    loadComponent: () =>
+      import('./features/listing/pages/my-listings/my-listings').then(
+        (m) => m.MyListingsPage
+      )
+  },
+  {
+    path: 'notifications',
+    loadComponent: () =>
+      import('./features/notifications/pages/notifications/notifications').then(
+        (m) => m.NotificationsPage
+      )
+  },
 
   {
     path: 'login',
