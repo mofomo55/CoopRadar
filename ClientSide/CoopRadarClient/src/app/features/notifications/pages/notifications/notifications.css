@@ -3,12 +3,25 @@
 }
 
 .page-shell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40vh;
-  padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 25vh;
+    gap: 40px;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
 }
+
+.main-shell {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem ;
+    padding-left: 2rem ;
+    padding-bottom: 100px;
+    flex-direction: column;
+}
+
+
 
 .page-title {
   margin: 0;

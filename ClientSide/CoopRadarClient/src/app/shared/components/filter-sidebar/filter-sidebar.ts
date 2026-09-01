@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 export interface FilterSidebarState {
@@ -8,6 +8,7 @@ export interface FilterSidebarState {
   cooperativeDeposit: number | null;
   roomCounts: number[];
   cooperativeCompanies: string[];
+  cities: string[];
 }
 
 @Component({
@@ -18,6 +19,11 @@ export interface FilterSidebarState {
   styleUrl: './filter-sidebar.css'
 })
 export class FilterSidebarComponent {
+  @Input() switchLabel = 'Enable Push Notifications';
+  @Input() showSwitch = false;
+  @Input() FilterBoxLabel = 'Filter Options';
+  @Input() ButtonFilterText = 'Apply Filters';
+
   @Output() filtersApply = new EventEmitter<FilterSidebarState>();
 
   minRent: number | null = null;
@@ -25,6 +31,8 @@ export class FilterSidebarComponent {
   cooperativeDeposit: number | null = null;
   selectedRooms: string[] = [];
   selectedCompanies: string[] = [];
+  selectedCities: string[] = [];
+  alertEnabled = true;
 
   readonly roomOptions = ['1', '2', '3', '4+'];
   readonly companyOptions = [
@@ -34,6 +42,14 @@ export class FilterSidebarComponent {
     'Gemeinsam Wohnen',
     'Mieterhilfe',
     'Stadtbaugenossenschaft'
+  ];
+  readonly cityOptions = [
+    'Vienna',
+    'Graz',
+    'Linz',
+    'Salzburg',
+    'Innsbruck',
+    'Klagenfurt'
   ];
 
   toggleRoom(room: string): void {
@@ -47,12 +63,21 @@ export class FilterSidebarComponent {
     this.selectedRooms.push(room);
   }
 
+  toggleAlertSwitch(): void {
+    this.alertEnabled = !this.alertEnabled;
+  }
+
+  get shouldShowFilterFields(): boolean {
+    return !this.showSwitch || this.alertEnabled;
+  }
+
   resetAll(): void {
     this.minRent = null;
     this.maxRent = null;
     this.cooperativeDeposit = null;
     this.selectedRooms = [];
     this.selectedCompanies = [];
+    this.selectedCities = [];
   }
 
   applyFilters(): void {
@@ -61,7 +86,8 @@ export class FilterSidebarComponent {
       maxRent: this.maxRent ?? null,
       cooperativeDeposit: this.cooperativeDeposit ?? null,
       roomCounts: this.selectedRooms.map((room) => room === '4+' ? 4 : Number(room)),
-      cooperativeCompanies: [...this.selectedCompanies]
+      cooperativeCompanies: [...this.selectedCompanies],
+      cities: [...this.selectedCities]
     };
 
     this.filtersApply.emit(state);

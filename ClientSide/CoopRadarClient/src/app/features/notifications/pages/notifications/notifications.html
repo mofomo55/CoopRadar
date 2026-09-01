@@ -1,3 +1,10 @@
-<section class="page-shell">
-  <h1 class="page-title">Notifications</h1>
+<section >
+  <div class="page-shell">
+    <h1 class="page-title">Notifications</h1>
+    <span>Activate the alarm and you will receive a notification immediately when a new apartment matching your filters is found.</span>
+  </div>
+    <main class="main-shell">
+    <app-filter-sidebar [showSwitch]="true" [switchLabel]="'Enable Push Notifications'" [FilterBoxLabel]="'Notifications Options'" [ButtonFilterText]="'Save Settings'" >
+    </app-filter-sidebar>
+    </main>
 </section>
