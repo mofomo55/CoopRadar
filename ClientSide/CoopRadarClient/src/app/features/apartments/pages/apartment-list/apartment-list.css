@@ -5,7 +5,9 @@ section {
   grid-template-columns: 350px 1fr; /* عرض ثابت للشريط وعرض مرن للمحتوى */
   /* gap: 24px;   */
   align-items: start; /* يمنع تمدد طول الشريط الجانبي ليصل للأسفل */
-  padding: 24px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+  padding-right: 24px;
 }
 
 h1 {
@@ -42,6 +44,40 @@ h1 {
   border-radius: 5px;
   padding: 20px;
 }
+
+
+header{
+  background-color: rgb(255, 255, 255);
+}
+
+.page-shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    gap: 40px;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+}
+
+.main-shell {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem ;
+    padding-left: 2rem ;
+    padding-bottom: 100px;
+    flex-direction: column;
+}
+
+
+
+.page-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #1f2937;
+}
+
 
   @media (min-width: 925px) {
 

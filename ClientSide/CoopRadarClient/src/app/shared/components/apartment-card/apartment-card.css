@@ -225,6 +225,11 @@
       stroke: #dc2626;
       stroke-width: 2;
       fill: none;
+      transition: fill 0.2s ease, stroke 0.2s ease;
+    }
+
+    .favorite-btn.is-favorite svg {
+      fill: #dc2626;
     }
 
   @media (max-width: 600px) {
