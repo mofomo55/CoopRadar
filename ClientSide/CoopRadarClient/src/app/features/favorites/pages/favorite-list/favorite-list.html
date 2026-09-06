@@ -1,4 +1,13 @@
-<section>
-  <h1>Favorite Listings</h1>
-  <p>Your saved apartments will appear here.</p>
+
+
+<section >
+  <div class="page-shell">
+    <h1 class="page-title">Favorite Listings</h1>
+    <span>Your saved apartments will appear here.</span>
+  </div>
+    <main class="content-List">
+       @for (apartment of favoriteService.list(); track apartment.id) {
+          <app-apartment-card [apartment]="apartment" />
+       }
+    </main>
 </section>
