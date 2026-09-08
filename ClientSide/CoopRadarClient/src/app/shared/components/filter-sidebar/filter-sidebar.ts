@@ -6,6 +6,8 @@ export interface FilterSidebarState {
   minRent: number | null;
   maxRent: number | null;
   cooperativeDeposit: number | null;
+  minArea: number | null;
+  maxArea: number | null;
   roomCounts: number[];
   cooperativeCompanies: string[];
   cities: string[];
@@ -29,6 +31,8 @@ export class FilterSidebarComponent {
   minRent: number | null = null;
   maxRent: number | null = null;
   cooperativeDeposit: number | null = null;
+  minArea: number | null = null;
+  maxArea: number | null = null;
   selectedRooms: string[] = [];
   selectedCompanies: string[] = [];
   selectedCities: string[] = [];
@@ -75,6 +79,8 @@ export class FilterSidebarComponent {
     this.minRent = null;
     this.maxRent = null;
     this.cooperativeDeposit = null;
+    this.minArea = null;
+    this.maxArea = null;
     this.selectedRooms = [];
     this.selectedCompanies = [];
     this.selectedCities = [];
@@ -85,6 +91,8 @@ export class FilterSidebarComponent {
       minRent: this.minRent ?? null,
       maxRent: this.maxRent ?? null,
       cooperativeDeposit: this.cooperativeDeposit ?? null,
+      minArea: this.minArea ?? null,
+      maxArea: this.maxArea ?? null,
       roomCounts: this.selectedRooms.map((room) => room === '4+' ? 4 : Number(room)),
       cooperativeCompanies: [...this.selectedCompanies],
       cities: [...this.selectedCities]

@@ -1,7 +1,31 @@
-section {
-  padding: 1.5rem;
+:host {
+  display: block;
 }
 
-h1 {
-  margin-bottom: 0.75rem;
+.page-shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    gap: 40px;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+}
+
+.main-shell {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem ;
+    padding-left: 2rem ;
+    padding-bottom: 100px;
+    flex-direction: column;
+}
+
+
+
+.page-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #1f2937;
 }

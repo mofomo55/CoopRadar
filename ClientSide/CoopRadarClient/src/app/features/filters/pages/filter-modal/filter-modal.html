@@ -1,4 +1,11 @@
-<section>
-  <h1>Filters</h1>
-  <p>Price, rooms, and city filters go here.</p>
+
+<section >
+  <div class="page-shell">
+    <h1 class="page-title">Filters</h1>
+    <span>Price, rooms, and city filters go here.</span>
+  </div>
+    <main class="main-shell">
+    <app-filter-sidebar [showSwitch]="false" [switchLabel]="'Show Filters'" [FilterBoxLabel]="'Filter Options'" [ButtonFilterText]="'Apply Filters'" >
+    </app-filter-sidebar>
+    </main>
 </section>

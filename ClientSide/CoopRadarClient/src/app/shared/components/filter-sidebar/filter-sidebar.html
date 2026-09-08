@@ -64,6 +64,33 @@
     </div>
 
     <div class="filter-sidebar__section">
+      <label class="field-label">Apartment Area (m²)</label>
+      <div class="range-inputs">
+        <div class="input-group">
+          <span class="input-prefix area-unit">m²</span>
+          <input
+            type="number"
+            [(ngModel)]="minArea"
+            min="0"
+            placeholder="Min"
+            aria-label="Minimum apartment area in square meters"
+          />
+        </div>
+
+        <div class="input-group">
+          <span class="input-prefix area-unit">m²</span>
+          <input
+            type="number"
+            [(ngModel)]="maxArea"
+            min="0"
+            placeholder="Max"
+            aria-label="Maximum apartment area in square meters"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-sidebar__section">
       <label class="field-label">Room Count</label>
       <div class="room-options">
         <button
