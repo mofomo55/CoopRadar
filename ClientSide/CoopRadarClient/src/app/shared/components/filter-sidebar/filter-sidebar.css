@@ -136,6 +136,10 @@
   font-weight: 700;
 }
 
+.area-unit {
+  min-width: 48px;
+}
+
 .input-group input,
 .currency-input input {
   width: 100%;
