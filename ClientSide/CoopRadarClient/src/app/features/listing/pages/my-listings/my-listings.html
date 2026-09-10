@@ -1,3 +1,20 @@
-<section class="page-shell">
-  <h1 class="page-title">My Listings</h1>
+
+
+<section class="my-listings-page">
+  <div class="page-shell">
+    <h1 class="page-title">My Listings</h1>
+    <span class="page-subtitle">Cooperative Companies in Each City.</span>
+  </div>
+
+  <main class="main-shell">
+    <div class="city-accordion-list">
+      <app-city-accordion
+        *ngFor="let group of cityGroups()"
+        [cityName]="group.city"
+        [companies]="group.companies"
+        (companySelected)="onCompanySelected($event)"
+      ></app-city-accordion>
+    </div>
+  </main>
 </section>
+
