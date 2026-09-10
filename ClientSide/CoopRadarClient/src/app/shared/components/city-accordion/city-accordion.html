@@ -1,0 +1,34 @@
+<div class="city-accordion" [class.is-open]="isOpen">
+  <button type="button" class="city-accordion__header" (click)="toggleOpen()" aria-expanded="{{ isOpen }}">
+    <span class="city-accordion__title">{{ cityName }}</span>
+    <span class="city-accordion__meta">
+      <span class="city-accordion__count">{{ companies.length }}</span>
+      <span class="city-accordion__toggle" aria-hidden="true">›</span>
+    </span>
+  </button>
+
+  <div class="city-accordion__panel" [class.is-visible]="isOpen">
+    <div class="city-accordion__list" *ngIf="companies.length; else emptyState">
+      <button
+        type="button"
+        class="city-accordion__company"
+        *ngFor="let company of companies"
+        (click)="selectCompany(company)"
+      >
+        <span class="city-accordion__company-badge" *ngIf="company.logoUrl">
+          <img [src]="company.logoUrl" [alt]="company.name" />
+        </span>
+
+        <span class="city-accordion__company-name">{{ company.name }}</span>
+
+        <span class="city-accordion__company-count" *ngIf="company.count !== undefined">
+          {{ company.count }}
+        </span>
+      </button>
+    </div>
+
+    <ng-template #emptyState>
+      <div class="city-accordion__empty">No housing cooperatives available.</div>
+    </ng-template>
+  </div>
+</div>

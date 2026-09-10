@@ -2,12 +2,39 @@
   display: block;
 }
 
+.my-listings-page {
+  padding-bottom: 100px;
+}
+
 .page-shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    gap: 40px;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+}
+
+.page-subtitle {
+  color: #475569;
+  font-size: 0.98rem;
+}
+
+.main-shell {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem ;
+    padding-left: 2rem ;
+    padding-bottom: 100px;
+    flex-direction: column;
+}
+
+.city-accordion-list {
+  width: min(100%, 900px);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40vh;
-  padding: 2rem 1.5rem;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .page-title {
