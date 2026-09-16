@@ -1,4 +1,9 @@
-section {
+section{
+  display:flex;
+  justify-content: center;
+}
+
+.Content-shell {
   /* padding: 1.5rem; */
   background-color: #fff;
   /* display: grid !important; */
@@ -8,6 +13,7 @@ section {
   padding-left: 24px;
   padding-bottom: 24px;
   padding-right: 24px;
+  width: min(100%,1320px);
 }
 
 h1 {
@@ -81,7 +87,7 @@ header{
 
   @media (min-width: 925px) {
 
-    section {
+    .Content-shell {
        display: grid !important;
     }
    .filters-sidebar{
