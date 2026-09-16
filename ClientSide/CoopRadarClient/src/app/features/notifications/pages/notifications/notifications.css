@@ -12,6 +12,14 @@
     flex-direction: column;
 }
 
+.filter-Box{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: min(100%, 1320px);
+    flex-direction: column;
+}
+
 .main-shell {
     display: flex;
     align-items: center;

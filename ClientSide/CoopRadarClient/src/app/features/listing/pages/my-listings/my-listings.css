@@ -31,7 +31,7 @@
 }
 
 .city-accordion-list {
-  width: min(100%, 900px);
+  width: min(100%, 1320px);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -43,3 +43,6 @@
   font-weight: 700;
   color: #1f2937;
 }
+
+
+
