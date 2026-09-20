@@ -1,0 +1,88 @@
+:host {
+  display: inline-block;
+}
+
+.image-upload-field {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-frame {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 3px solid #1f9bf1;
+  background: linear-gradient(135deg, #eaf4ff 0%, #dfeaf8 100%);
+  box-shadow: 0 10px 24px rgba(31, 155, 241, 0.16);
+  transition: all 0.2s ease;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: #edf3fb;
+}
+
+.image-frame.is-circle {
+  border-radius: 50%;
+}
+
+.image-frame.is-square {
+  border-radius: 18px;
+}
+
+.image-actions {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.icon-button {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border: 2px solid rgba(31, 155, 241, 0.9);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a8fe3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(30, 80, 140, 0.12);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(30, 80, 140, 0.18);
+}
+
+.icon-button svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.upload-button input {
+  display: none;
+}
+
+.delete-button {
+  border-color: rgba(220, 53, 69, 0.9);
+  color: #d63b4d;
+}
+
+.delete-button svg {
+  stroke: currentColor;
+}

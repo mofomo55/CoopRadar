@@ -1,11 +1,12 @@
 section{
   display:flex;
   justify-content: center;
+  background: #eef1f4;
 }
 
 .Content-shell {
   /* padding: 1.5rem; */
-  background-color: #fff;
+  background: #eef1f4;
   /* display: grid !important; */
   grid-template-columns: 350px 1fr; /* عرض ثابت للشريط وعرض مرن للمحتوى */
   /* gap: 24px;   */
@@ -13,6 +14,7 @@ section{
   padding-left: 24px;
   padding-bottom: 24px;
   padding-right: 24px;
+  padding-top: 20px;
   width: min(100%,1320px);
 }
 

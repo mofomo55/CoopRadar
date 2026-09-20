@@ -1,6 +1,8 @@
 section{
     display:flex;
     justify-content: center;
+    background: #eef1f4;
+    padding-top: 20px;
 }
 
 .page-shell {
@@ -10,6 +12,7 @@ section{
     min-height: 10vh;
     gap: 40px;
     padding: 2rem 1.5rem;
+  
     flex-direction: column;
 }
 
@@ -34,6 +37,7 @@ section{
 
 .content-List{
     background-color: rgb(255, 255, 255);
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

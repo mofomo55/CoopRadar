@@ -1,4 +1,108 @@
-<section>
-  <h1>Edit profile</h1>
-  <p>Update your account, preferences, and contact details.</p>
+
+<header class="page-shell">
+    <h1 class="page-title">My Profile</h1>
+    <span>Here, you can manage your profile information.</span>
+</header>
+
+
+
+
+<section class="profile-page">
+  <div class="profile-shell">
+    <!-- <header class="profile-header">
+      <button type="button" class="back-button" aria-label="Go back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <h1>My Profile</h1>
+    </header> -->
+
+    <div class="profile-card">
+      <div class="avatar-wrap">
+        <app-image-upload-field
+          [imagePath]="profileImage"
+          imageTitle="Profile image"
+          [width]="160"
+          [height]="160"
+          shape="circle"
+          defaultImagePath="/images/default-user.svg"
+          (imageSelected)="onImageSelected($event)"
+          (imageDeleted)="onImageDeleted()"
+        ></app-image-upload-field>
+      </div>
+
+      <div class="field-list">
+        <div class="input-group">
+          <label for="fullName">Full Name</label>
+          <div class="input-box">
+            <span class="input-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zm14.71-9.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z"/></svg>
+            </span>
+            <input id="fullName" type="text" value="Sarah Al-Fassi" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="username">Username</label>
+          <div class="input-box">
+            <span class="input-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 20a7 7 0 0 1 14 0"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <input id="username" type="text" value="@sarah_coop" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <div class="input-box">
+            <span class="input-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            </span>
+            <input id="email" type="email" value="sarah.coop@mail.co" />
+          </div>
+        </div>
+      </div>
+
+      <div class="security-section">
+        <h2>Security / Change Password</h2>
+
+        <div class="input-group">
+          <label for="currentPassword">Current Password</label>
+          <div class="input-box">
+            <span class="input-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="5" y="10" width="14" height="10" rx="2"/></svg>
+            </span>
+            <input id="currentPassword" type="password" placeholder="Current Password" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="newPassword">New Password</label>
+          <div class="input-box">
+            <span class="input-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="5" y="10" width="14" height="10" rx="2"/></svg>
+            </span>
+            <input id="newPassword" type="password" placeholder="New Password" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="confirmPassword">Confirm New Password</label>
+          <div class="input-box">
+            <span class="input-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="5" y="10" width="14" height="10" rx="2"/></svg>
+            </span>
+            <input id="confirmPassword" type="password" placeholder="Confirm New Password" />
+          </div>
+        </div>
+      </div>
+
+      <div class="action-stack">
+        <button type="button" class="primary-button">Save Changes</button>
+        <button type="button" class="danger-button">Remove account</button>
+        <button type="button" class="secondary-button">Log Out</button>
+      </div>
+    </div>
+  </div>
 </section>
