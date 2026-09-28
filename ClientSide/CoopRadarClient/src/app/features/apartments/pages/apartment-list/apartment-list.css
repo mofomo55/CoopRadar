@@ -24,7 +24,7 @@ h1 {
 }
 
 .content-List{
-    background-color: rgb(255, 255, 255);
+    background-color: #eef1f4;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -48,7 +48,7 @@ h1 {
    overflow-y: auto;  
      display:none !important;
   /* التنسيق البصري */
-  background-color: rgb(255, 255, 255);
+  background-color:#eef1f4;
   border-radius: 5px;
   padding: 20px;
 }

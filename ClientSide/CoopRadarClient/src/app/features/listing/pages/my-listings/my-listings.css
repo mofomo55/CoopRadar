@@ -4,6 +4,8 @@
 
 .my-listings-page {
   padding-bottom: 100px;
+  background: #eef1f4;
+  min-height: 840px;
 }
 
 .page-shell {
