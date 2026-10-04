@@ -1,13 +1,16 @@
 :host {
   display: block;
+  min-height: 100%;
 }
 
 .page-shell {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 40vh;
+  min-height: 10vh;
+  gap: 40px;
   padding: 2rem 1.5rem;
+  flex-direction: column;
 }
 
 .page-title {
@@ -15,4 +18,29 @@
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
   color: #1f2937;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  background: #eef1f4;
+  padding: 30px 24px 70px;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  width: min(100%, 1250px);
+}
+
+@media (max-width: 760px) {
+  .information-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .page-content {
+    padding: 20px 16px 48px;
+  }
 }
