@@ -1,0 +1,28 @@
+<article
+  class="information-box"
+  [class.information-box--card]="shape() === 'card'"
+  [class.information-box--square]="shape() === 'square'"
+  [class.information-box--bar]="shape() === 'bar'"
+  [style.width]="widthCss()"
+  [style.height]="heightCss()"
+>
+  <div class="information-box__icon" aria-hidden="true">
+    @if (iconPath()) {
+      <svg viewBox="0 0 24 24" focusable="false">
+        <path [attr.d]="iconPath()"></path>
+      </svg>
+    } @else {
+      <span>{{ icon() }}</span>
+    }
+  </div>
+
+  <div class="information-box__content">
+    <h2 class="information-box__title">{{ title() }}</h2>
+    <p class="information-box__text">{{ text() }}</p>
+    @if (actionLabel() && actionLink()) {
+      <a class="information-box__action" [routerLink]="actionLink()">
+        {{ actionLabel() }} <span aria-hidden="true">→</span>
+      </a>
+    }
+  </div>
+</article>
