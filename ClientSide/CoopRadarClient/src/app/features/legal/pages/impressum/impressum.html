@@ -1,3 +1,14 @@
-<section class="page-shell">
+<header class="page-shell">
   <h1 class="page-title">Impressum</h1>
+  <span>Company information</span>
+</header>
+
+<section class="page-content">
+  <app-information-box
+    [title]="companyInfo.title"
+    [text]="companyInfo.text"
+    icon="§"
+    shape="bar"
+    width="100%"
+  ></app-information-box>
 </section>
