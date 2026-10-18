@@ -1,3 +1,20 @@
-<section class="page-shell">
-  <h1 class="page-title">Nutzungsbedingungen</h1>
+<header class="page-shell">
+  <h1 class="page-title">Terms of Use</h1>
+  <span> for our Application</span>
+</header>
+
+
+
+<section class="page-content">
+  <div class="information-grid">
+    @for (box of informationBoxes; track box.number) {
+      <app-information-box
+        [title]="box.title"
+        [text]="box.text"
+        [icon]="box.number"
+        shape="bar"
+        width="100%"
+      ></app-information-box>
+    }
+  </div>
 </section>
